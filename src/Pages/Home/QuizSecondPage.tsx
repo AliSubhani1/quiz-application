@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../Store";
-import { setCurrentPage, setAnswer } from "../../Reducers/quizReducer.ts";
+import { setCurrentPage, setAnswer, resetQuiz } from "../../Reducers/quizReducer.ts";
 import TitleSection from "../../Components/TitleSection.tsx";
 import ProgressBar from "../../Components/ProgressBar.tsx";
 import { useNavigate } from "react-router-dom";
@@ -56,6 +56,7 @@ const QuizSecondPage = () => {
       console.error("Error submitting quiz:", error);
       alert("Failed to submit the quiz. Please try again.");
     }
+    dispatch(resetQuiz());
   };
 
   return (
@@ -94,6 +95,7 @@ const QuizSecondPage = () => {
           className="text-red-0 hover:underline"
           onClick={() => {
             dispatch(setCurrentPage("home"));
+            dispatch(resetQuiz());
           }}
         >
           End quiz and exit

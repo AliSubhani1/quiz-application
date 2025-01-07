@@ -120,8 +120,8 @@ const navigate = useNavigate();
       <div className="flex justify-between mt-10 w-[90%] mx-auto">
         <button
           onClick={() => {dispatch(setCurrentPage("home"));
-            navigate("/");
             dispatch(resetQuiz());
+            navigate("/");
           }}
           className="text-red-0 underline"
         >
@@ -129,8 +129,8 @@ const navigate = useNavigate();
         </button>
         <button
           onClick={() => {dispatch(setCurrentPage("home"));
-            navigate("/");
             dispatch(resetQuiz());
+            navigate("/");
           }}
           className="bg-red-0 text-white-0 text-white py-2 px-6 rounded-md flex items-center gap-2 hover:opacity-90"
         >
