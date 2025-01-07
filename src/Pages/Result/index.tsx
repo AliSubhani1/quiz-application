@@ -7,7 +7,7 @@ import HandEmoji from "../../Assets/Images/Emoji.svg";
 import Spinner from "../../Components/Spinner.tsx";
 import CorrectIcon from '../../Assets/Images/correctIcon.svg';
 import WrongIcon from '../../Assets/Images/wrongIcon.svg';
-import { setCurrentPage } from "../../Reducers/quizReducer.ts";
+import { resetQuiz, setCurrentPage } from "../../Reducers/quizReducer.ts";
 import { useNavigate } from "react-router";
 
 interface ResultDetails {
@@ -121,6 +121,7 @@ const navigate = useNavigate();
         <button
           onClick={() => {dispatch(setCurrentPage("home"));
             navigate("/");
+            dispatch(resetQuiz());
           }}
           className="text-red-0 underline"
         >
@@ -129,6 +130,7 @@ const navigate = useNavigate();
         <button
           onClick={() => {dispatch(setCurrentPage("home"));
             navigate("/");
+            dispatch(resetQuiz());
           }}
           className="bg-red-0 text-white-0 text-white py-2 px-6 rounded-md flex items-center gap-2 hover:opacity-90"
         >
