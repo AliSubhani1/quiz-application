@@ -78,10 +78,6 @@ Currently, this website is deployed on netlify. Following simple steps can be us
 - Create a Cloudfront distribution on AWS and connect the S3 bucket from last step.
 - Use the cloudfront link for accessing secure HTTPS link of the deployed website on aws.
 
-### Assumptions:
-
-As backend endpoints were not already live so I have created a mock server on postman to create mock APIs with a dummy response. All three APIs have a dummy response as it was provided in the documentation. That exact response has been set on postman mock server and whenever these APIs are called for the positive cases we always get the same response that I have already set on the mock server. So, the results page will always show same result even if user chooses different answers to questions on different attempts.
-
 ### Running Unit Tests:
 
 For running the unit tests you can run the following command,
